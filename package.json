@@ -16,6 +16,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "gatsby-plugin-pnpm": "^1.2.10",
     "prettier": "^2.7.1"
   },
   "keywords": [

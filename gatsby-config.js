@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-pnpm`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
