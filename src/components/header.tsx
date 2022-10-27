@@ -1,8 +1,8 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import * as React from 'react'
 
-const Header = ({ siteTitle }) => (
+import { Link } from 'gatsby'
+
+const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
     style={{
       margin: `0 auto`,
@@ -29,13 +29,5 @@ const Header = ({ siteTitle }) => (
     />
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

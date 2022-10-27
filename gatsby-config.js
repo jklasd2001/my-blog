@@ -1,12 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `jklasd2001's 블로그`,
+    description: `하루하루 조금씩이라도 나아가자`,
+    author: `@jkalsd2001`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-pnpm`,
+    {
+      resolve: `gatsby-plugin-typescript`,
+        options: {
+          isTSX: true, // defaults to false
+          jsxPragma: `jsx`, // defaults to "React"
+          allExtensions: true, // defaults to false
+        },
+     },
+    `gatsby-plugin-tsconfig-paths`,
+    `gatsby-plugin-provide-react`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
