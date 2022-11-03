@@ -19,7 +19,6 @@
       "src/*": ["./src/*"]
     },
     "baseUrl": "./",
-    "jsxImportSource": "@emotion/react"
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "public", ".cache"]

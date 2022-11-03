@@ -7,6 +7,7 @@
     "wayou.vscode-todo-highlight",
     "codeandstuff.package-json-upgrade",
     "formulahendry.auto-rename-tag",
-    "meganrogge.template-string-converter"
+    "meganrogge.template-string-converter",
+    "bradlc.vscode-tailwindcss"
   ]
 }

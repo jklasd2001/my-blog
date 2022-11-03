@@ -15,9 +15,9 @@ module.exports = {
           allExtensions: true, // defaults to false
         },
      },
-    `gatsby-plugin-tsconfig-paths`,
-    `gatsby-plugin-provide-react`,
-    `gatsby-plugin-emotion`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-tsconfig-paths`, // 절대경로
+    `gatsby-plugin-provide-react`, // import * as React from 'react' 없애기
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

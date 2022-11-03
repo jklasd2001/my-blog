@@ -2,7 +2,7 @@ import { Seo, Layout } from 'src/components'
 
 const IndexPage = () => (
   <Layout>
-    <div>반갑습니다. 웹 프론트엔드 개발자 김영수입니다.</div>
+    <div className="bg-black">반갑습니다. 웹 프론트엔드 개발자 김영수입니다.</div>
   </Layout>
 )
 
