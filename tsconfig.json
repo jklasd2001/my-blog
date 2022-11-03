@@ -21,6 +21,6 @@
     "baseUrl": "./",
     "jsxImportSource": "@emotion/react"
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/templates/using-dsg.js"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "public", ".cache"]
 }

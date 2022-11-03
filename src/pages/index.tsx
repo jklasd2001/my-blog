@@ -1,31 +1,8 @@
-import { StaticImage } from 'gatsby-plugin-image'
-
-import Seo from 'src/components/seo'
-
-import Layout from '../components/layout'
+import { Seo, Layout } from 'src/components'
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <div>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={['auto', 'webp', 'avif']}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1 css={{ color: 'red' }}>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p css={{ backgroundColor: 'red' }}>
-        <b>Example pages:</b> <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul>opkpo</ul>
+    <div>반갑습니다. 웹 프론트엔드 개발자 김영수입니다.</div>
   </Layout>
 )
 

@@ -1,18 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from 'react'
+import { Fragment } from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import './layout.css'
+import { Header } from 'src/components'
 
-const Layout = ({ children }: any) => {
+export const Layout = ({ children }: any) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +16,7 @@ const Layout = ({ children }: any) => {
   `)
 
   return (
-    <>
+    <Fragment>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -45,8 +37,6 @@ const Layout = ({ children }: any) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </Fragment>
   )
 }
-
-export default Layout

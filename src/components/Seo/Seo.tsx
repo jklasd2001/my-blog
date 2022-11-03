@@ -1,15 +1,8 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from 'react'
+import { Fragment } from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-const Seo = ({ description, title, children }: any) => {
+export const Seo = ({ description, title, children }: any) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,7 +21,7 @@ const Seo = ({ description, title, children }: any) => {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <>
+    <Fragment>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
@@ -39,8 +32,6 @@ const Seo = ({ description, title, children }: any) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </Fragment>
   )
 }
-
-export default Seo
