@@ -1,4 +1,6 @@
-module.exports = {
+import { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `jklasd2001's 블로그`,
     description: `하루하루 조금씩이라도 나아가자`,
@@ -9,12 +11,12 @@ module.exports = {
     `gatsby-plugin-pnpm`,
     {
       resolve: `gatsby-plugin-typescript`,
-        options: {
-          isTSX: true, // defaults to false
-          jsxPragma: `jsx`, // defaults to "React"
-          allExtensions: true, // defaults to false
-        },
-     },
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-tsconfig-paths`, // 절대경로
     `gatsby-plugin-provide-react`, // import * as React from 'react' 없애기
@@ -44,3 +46,5 @@ module.exports = {
     },
   ],
 }
+
+export default config
