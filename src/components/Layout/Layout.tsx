@@ -2,7 +2,9 @@ import { Fragment } from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { Header } from 'src/components'
+import { Footer, Header, Container } from 'src/components'
+
+import {} from '../Container'
 
 export const Layout = ({ children }: any) => {
   const data = useStaticQuery(graphql`
@@ -15,28 +17,23 @@ export const Layout = ({ children }: any) => {
     }
   `)
 
+  console.log(data)
+
   return (
     <Fragment>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
+      <Container>
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <div
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            margin: `0 auto`,
+            maxWidth: `var(--size-content)`,
+            padding: `var(--size-gutter)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+          <main>{children}</main>
+        </div>
+        <Footer />
+      </Container>
     </Fragment>
   )
 }

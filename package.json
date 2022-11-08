@@ -25,28 +25,29 @@
     "sort-package-json": "npx sort-package-json"
   },
   "dependencies": {
-    "gatsby": "^4.24.7",
+    "classnames": "^2.3.2",
+    "gatsby": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.7",
-    "@types/react": "^18.0.24",
+    "@tailwindcss/typography": "^0.5.8",
+    "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "autoprefixer": "^10.4.13",
     "eslint-config-jklasd2001s": "^0.0.1",
-    "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-manifest": "^4.24.0",
+    "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-pnpm": "^1.2.10",
-    "gatsby-plugin-postcss": "^5.24.0",
+    "gatsby-plugin-postcss": "^6.0.0",
     "gatsby-plugin-provide-react": "^1.0.2",
-    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-tsconfig-paths": "^1.0.5",
-    "gatsby-plugin-typescript": "^4.24.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-sharp": "^4.24.0",
+    "gatsby-plugin-typescript": "^5.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-sharp": "^5.0.0",
     "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1",
+    "tailwindcss": "^3.2.2",
     "typescript": "^4.8.4"
   }
 }
