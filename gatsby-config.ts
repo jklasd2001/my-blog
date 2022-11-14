@@ -20,7 +20,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-tsconfig-paths`, // 절대경로
     `gatsby-plugin-provide-react`, // import * as React from 'react' 없애기
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,8 +27,9 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
