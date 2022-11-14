@@ -1,38 +1,14 @@
 import { Fragment } from 'react'
 
-import { useStaticQuery, graphql } from 'gatsby'
-
-import { Footer, Header, Container } from 'src/components'
-
-import {} from '../Container'
+import { Container } from 'src/components'
 
 export const Layout = ({ children }: any) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  console.log(data)
-
   return (
     <Fragment>
       <Container>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: `var(--size-content)`,
-            padding: `var(--size-gutter)`,
-          }}
-        >
-          <main>{children}</main>
-        </div>
-        <Footer />
+        {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+        <main className="text-gray-200">{children}</main>
+        {/* <Footer /> */}
       </Container>
     </Fragment>
   )

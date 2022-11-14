@@ -1,24 +1,15 @@
-export const Header = ({ siteTitle }: { siteTitle: string }) => (
-  <header className="bg-whit flex dark:bg-black">
-    <div>jklasd2001</div>
+import { Link } from 'gatsby'
 
-    <div>
-      <button
-        className=""
-        onClick={() => {
-          localStorage.theme = 'dark'
-        }}
-      >
-        다크모드
-      </button>
-      <button
-        className=""
-        onClick={() => {
-          localStorage.theme = 'light'
-        }}
-      >
-        노말모드
-      </button>
-    </div>
+export const Header = ({ siteTitle }: { siteTitle: string }) => (
+  <header className="flex p-6 border-b-slate-200">
+    <Link to="/">Logo</Link>
+
+    <nav className="text-white ml-auto">
+      <ul className="flex gap-4">
+        <Link to="/resume">About me</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="https://github.com/jklasd2001">Github</Link>
+      </ul>
+    </nav>
   </header>
 )
