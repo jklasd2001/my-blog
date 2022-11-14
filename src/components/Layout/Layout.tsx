@@ -7,7 +7,7 @@ export const Layout = ({ children }: any) => {
     <Fragment>
       <Container>
         {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-        <main className="text-gray-200">{children}</main>
+        <main className="text-slate-800">{children}</main>
         {/* <Footer /> */}
       </Container>
     </Fragment>
