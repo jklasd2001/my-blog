@@ -1,14 +1,24 @@
 import { Link } from 'gatsby'
 
-export const Header = ({ siteTitle }: { siteTitle: string }) => (
-  <header className="flex p-6 border-b-slate-200">
-    <Link to="/">Logo</Link>
+import Logo from '../../assets/images/logo2.svg'
+
+export const Header = ({ siteTitle }: { siteTitle?: string }) => (
+  <header className="flex py-6 border-b-slate-200">
+    <Link to="/">
+      <Logo className="w-[200px]" />
+    </Link>
 
     <nav className="text-white ml-auto">
       <ul className="flex gap-4">
-        <Link to="/resume">About me</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="https://github.com/jklasd2001">Github</Link>
+        <Link to="/resume" className="text-gray-800">
+          About me
+        </Link>
+        <Link to="/blog" className="text-gray-800">
+          Blog
+        </Link>
+        <Link to="https://github.com/jklasd2001" className="text-gray-800">
+          Github
+        </Link>
       </ul>
     </nav>
   </header>

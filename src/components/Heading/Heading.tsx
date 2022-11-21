@@ -22,12 +22,12 @@ export const Heading = ({
 }: HeadingProps) => {
   const style = useMemo(() => {
     return {
-      h1: 'text-5xl font-bold mb-10',
-      h2: 'text-4xl font-bold mb-9',
-      h3: 'text-3xl font-semibold mb-6',
-      h4: 'text-2xl font-semibold mb-2',
-      h5: 'text-xl font-semibold mb-2',
-      h6: 'text-lg font-semibold mb-2',
+      h1: 'md:text-5xl text-4xl font-bold mb-10',
+      h2: 'md:text-4xl text-3xl font-bold mb-9',
+      h3: 'md:text-3xl text-2xl font-semibold mb-6',
+      h4: 'md:text-2xl text-xl font-semibold mb-2',
+      h5: 'md:text-xl text-lg font-semibold mb-2',
+      h6: 'md:text-lg text-md font-semibold mb-2',
     }[type]
   }, [type])
 
