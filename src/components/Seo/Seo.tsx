@@ -1,8 +1,15 @@
-import { Fragment } from 'react'
+import { Fragment, ReactNode } from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const Seo = ({ description, title, children }: any) => {
+interface SeoProps {
+  description?: string
+  title?: string
+  author?: string
+  children?: ReactNode
+}
+
+export const Seo = ({ description, title, children }: SeoProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
