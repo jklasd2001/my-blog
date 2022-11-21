@@ -38,14 +38,14 @@ const IndexPage = () => {
       <Row>
         <Heading type="h1">🙋🏻‍♂️ Introduce</Heading>
 
-        <Box className="flex gap-16 mb-12 flex-col md:flex-row">
+        <Box className="flex gap-16 mb-12">
           <StaticImage
             src="../assets/images/my-profile.jpeg"
             alt="Profile"
-            className="rounded-full w-48 h-48 shadow-lg ring-8 ring-slate-900 ring-opacity-5 self-center md:self-start"
+            className="rounded-full w-48 h-48 shadow-lg ring-8 ring-slate-900 ring-opacity-5"
           />
 
-          <Box className="flex-1 flex flex-col justify-center">
+          <Box className="flex-1 flex justify-center items-center">
             <List>
               <ListItem>
                 <Span className="text-xl font-medium">Email | </Span>
@@ -104,7 +104,7 @@ const IndexPage = () => {
             건설현장의 근로자 안전 및 중장비, 건설 자재 관리 및 모니터링 서비스 스타트업
           </Paragraph>
 
-          <Box className="flex sm:flex-col gap-16">
+          <Box className="flex flex-col md:flex-row gap-16">
             <Box className="">
               <Box>
                 <Strong>Frontend Developer</Strong>
@@ -286,15 +286,9 @@ const IndexPage = () => {
                 <Heading type="h5">Work</Heading>
 
                 <List className="mb-10">
-                  <ListItem>안드로이드 개발자로 입사하여 혼자서 앱 UI 80% 개발</ListItem>
+                  <ListItem>입사 직후 스터디 헬퍼 리뉴얼 프로젝트를 담당하여 개발 시작부터, Google Play 스토어 배포까지 경험</ListItem>
 
-                  <ListItem>FCM을 이용한 사용자간의 채팅 기능 개발</ListItem>
-
-                  <ListItem>공부 시간 및 D-Day 위젯 기능 개발</ListItem>
-
-                  <ListItem>
-                    스터디헬퍼 v4 안드로이드 버전 런칭 후 버그 리포트 및 유지 보수
-                  </ListItem>
+                  <ListItem>안드로이드 UI 개발 80% 개발</ListItem>
                 </List>
 
                 <Heading type="h5">Tech Stack</Heading>
