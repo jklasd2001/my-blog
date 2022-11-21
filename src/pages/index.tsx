@@ -31,20 +31,18 @@ const IndexPage = () => {
           <br /> 프론트엔드 개발자 김영수입니다.
         </Heading>
         <Box className="text-right">
-          <Span className="text-md">
-            Updated at: {`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`}
-          </Span>
+          <Span className="text-md">Updated at: 2022-11-21</Span>
         </Box>
       </Row>
 
       <Row>
         <Heading type="h1">🙋🏻‍♂️ Introduce</Heading>
 
-        <Box className="flex gap-16 mb-12">
+        <Box className="flex gap-16 mb-12 flex-col md:flex-row">
           <StaticImage
             src="../assets/images/my-profile.jpeg"
             alt="Profile"
-            className="rounded-full w-48 h-48 shadow-lg ring-8 ring-slate-900 ring-opacity-5"
+            className="rounded-full w-48 h-48 shadow-lg ring-8 ring-slate-900 ring-opacity-5 self-center md:self-start"
           />
 
           <Box className="flex-1 flex flex-col justify-center">
@@ -106,7 +104,7 @@ const IndexPage = () => {
             건설현장의 근로자 안전 및 중장비, 건설 자재 관리 및 모니터링 서비스 스타트업
           </Paragraph>
 
-          <Box className="flex gap-16">
+          <Box className="flex sm:flex-col gap-16">
             <Box className="">
               <Box>
                 <Strong>Frontend Developer</Strong>

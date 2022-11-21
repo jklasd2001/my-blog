@@ -27,13 +27,61 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contents`,
+        path: `${__dirname}/contents`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       // {
+    //       //   resolve: 'gatsby-remark-images',
+    //       //   options: {
+    //       //     maxWidth: 768,
+    //       //     quality: 100,
+    //       //     withWebp: true,
+    //       //   },
+    //       // },
+    //       {
+    //         resolve: 'gatsby-remark-external-links',
+    //         options: {
+    //           target: '_blank',
+    //           rel: 'nofollow',
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `jkalsd2001's Blog`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
