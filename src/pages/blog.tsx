@@ -22,8 +22,8 @@ type IndexPageProps = {
 
 const BlogPage = ({ data }: PageProps<IndexPageProps>) => {
   return (
-    <Layout>
-      <Box className="flex flex-wrap -m-4">
+    <Layout className="max-w-screen-lg">
+      <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.allMarkdownRemark.edges.map((edge) => (
           <PostCard
             key={edge.node.id}
@@ -43,7 +43,7 @@ export default BlogPage
 
 export const getPostList = graphql`
   query getPostList {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id

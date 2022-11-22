@@ -10,7 +10,7 @@ interface PostCardProps {
 
 export const PostCard = ({ title, summary, date }: PostCardProps) => {
   return (
-    <Box className="m-4 w-80 rounded hover:translate-y-1 overflow-hidden bg-black shadow-md hover:shadow-lg transition-all">
+    <Box className="rounded hover:translate-y-1 overflow-hidden bg-black shadow-md hover:shadow-lg transition-all">
       <Box className="p-6">
         <Link to="/">
           <Heading type="h4">{title}</Heading>

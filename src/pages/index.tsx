@@ -286,7 +286,10 @@ const IndexPage = () => {
                 <Heading type="h5">Work</Heading>
 
                 <List className="mb-10">
-                  <ListItem>입사 직후 스터디 헬퍼 리뉴얼 프로젝트를 담당하여 개발 시작부터, Google Play 스토어 배포까지 경험</ListItem>
+                  <ListItem>
+                    입사 직후 스터디 헬퍼 리뉴얼 프로젝트를 담당하여 개발 시작부터, Google Play
+                    스토어 배포까지 경험
+                  </ListItem>
 
                   <ListItem>안드로이드 UI 개발 80% 개발</ListItem>
                 </List>
