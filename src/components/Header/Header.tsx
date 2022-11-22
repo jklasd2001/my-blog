@@ -13,9 +13,14 @@ export const Header = () => (
         <Link to="/" className="text-gray-800">
           About me
         </Link>
-        <Link to="https://github.com/jklasd2001" className="text-gray-800">
-          Github
+
+        <Link to="/blog" className="text-gray-800">
+          Blog
         </Link>
+
+        {/* <Link to="https://github.com/jklasd2001" className="text-gray-800">
+          Github
+        </Link> */}
       </ul>
     </nav>
   </header>

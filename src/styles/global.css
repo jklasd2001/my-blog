@@ -12,15 +12,18 @@
     }
 
     body {
-        @apply bg-white
+        @apply bg-white;
+        height: 100%;
+        @apply bg-neutral-50;
     }
 
     html {
-        @apply font-pretendard
+        @apply font-pretendard;
+        height: 100%;
     }
 
     p {
-        @apply text-lg
+        @apply text-lg;
     }
 
     ul {
