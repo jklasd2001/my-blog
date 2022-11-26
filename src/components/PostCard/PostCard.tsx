@@ -1,6 +1,6 @@
 import { Link, navigate } from 'gatsby'
 
-import { Box, Heading, Paragraph, Span } from 'src/components'
+import { Box, Heading, Paragraph, Span } from 'src/elements'
 
 interface PostCardProps {
   slug: string
@@ -12,7 +12,7 @@ interface PostCardProps {
 export const PostCard = ({ title, summary, date, slug }: PostCardProps) => {
   return (
     <Box
-      className="rounded hover:translate-y-1 overflow-hidden bg-black shadow-md hover:shadow-lg transition-all"
+      className="rounded hover:translate-y-1 overflow-hidden border shadow-md hover:shadow-lg transition-all"
       onClick={() => {
         navigate(slug)
       }}

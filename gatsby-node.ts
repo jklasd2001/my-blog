@@ -3,45 +3,19 @@ import path from 'path'
 import { GatsbyNode } from 'gatsby'
 import { createFilePath } from 'gatsby-source-filesystem'
 
-interface Post {
-  allMarkdownRemark: {
-    edges: AAA[]
-  }
-}
-
-interface AAA {
-  node: {
-    id: string
-    fields: {
-      slug: string
-    }
-    frontmatter: {
-      title: string
-      date: string
-      summary: string
-      thumbnail: string
-    }
-  }
-}
+import { AllMarkdownRemark, NodeFieldsSlug } from 'src/types'
 
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   // GraphQL 쿼리
-  const queryAllMarkdownData = await graphql<Post>(`
+  const queryAllMarkdownData = await graphql<AllMarkdownRemark<NodeFieldsSlug>>(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
-            id
             fields {
               slug
-            }
-            frontmatter {
-              title
-              summary
-              date(formatString: "YYYY.MM.DD.")
-              categories
             }
           }
         }
@@ -56,7 +30,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   // 포스트 템플릿
   const postTemplate = path.resolve(`./src/templates/post_template.tsx`)
 
-  const generatePostPage = (edge: AAA) => {
+  const generatePostPage = (edge: NodeFieldsSlug) => {
     const {
       node: {
         fields: { slug },

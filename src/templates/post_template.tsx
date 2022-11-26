@@ -1,6 +1,6 @@
 import { graphql, PageProps } from 'gatsby'
 
-import { Layout } from 'src/components'
+import { Layout, Seo } from 'src/components'
 
 type PostTemplateProps = {
   allMarkdownRemark: {
@@ -21,12 +21,17 @@ type PostTemplateProps = {
 }
 
 const PostTemplate = (props: PageProps<PostTemplateProps>) => {
-  console.log(props.data.allMarkdownRemark.edges[0].node.html)
+  const {
+    html,
+    frontmatter: { title, categories, summary, date },
+  } = props.data.allMarkdownRemark.edges[0].node
+
   return (
     <Layout>
+      <Seo title={title} description={summary} />
       <article
         className="prose lg:prose-xl prose-slate"
-        dangerouslySetInnerHTML={{ __html: props.data.allMarkdownRemark.edges[0].node.html }}
+        dangerouslySetInnerHTML={{ __html: html }}
       />
     </Layout>
   )
@@ -43,7 +48,7 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            date(formatString: "YYYY.MM.DD")
             categories
           }
         }

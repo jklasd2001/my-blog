@@ -3,9 +3,8 @@ import { Fragment, ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 interface SeoProps {
-  description?: string
   title?: string
-  author?: string
+  description?: string
   children?: ReactNode
 }
 
@@ -17,7 +16,6 @@ export const Seo = ({ description, title, children }: SeoProps) => {
           siteMetadata {
             title
             description
-            author
           }
         }
       }

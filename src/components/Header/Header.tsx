@@ -10,11 +10,11 @@ export const Header = () => (
 
     <nav className="text-white ml-auto">
       <ul className="flex gap-4">
-        <Link to="/" className="text-gray-800">
+        <Link to="/" className="text-gray-800 text-lg font-medium">
           About me
         </Link>
 
-        <Link to="/blog" className="text-gray-800">
+        <Link to="/blog" className="text-gray-800 text-lg font-medium">
           Blog
         </Link>
 

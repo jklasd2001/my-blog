@@ -12,23 +12,12 @@
     }
 
     body {
-        @apply bg-white;
-        height: 100%;
         @apply bg-neutral-50;
+        height: 100%;
     }
 
     html {
         @apply font-pretendard;
         height: 100%;
-    }
-
-    p {
-        @apply text-lg;
-    }
-
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: disc;
     }
 }

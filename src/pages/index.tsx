@@ -1,28 +1,13 @@
 /**
  * https://www.gatsbyjs.com/plugins/gatsby-plugin-image
  */
-import { useState } from 'react'
 
 import { StaticImage } from 'gatsby-plugin-image'
 
-import {
-  Seo,
-  Layout,
-  Row,
-  ListItem,
-  MyLink,
-  List,
-  Heading,
-  Paragraph,
-  Box,
-  Span,
-  Divider,
-  Strong,
-} from 'src/components'
+import { Seo, Layout, Row, MyLink } from 'src/components'
+import { Box, Span, ListItem, Divider, Strong, List, Heading, Paragraph } from 'src/elements'
 
 const IndexPage = () => {
-  const [date] = useState(new Date())
-
   return (
     <Layout>
       <Row>
@@ -40,8 +25,9 @@ const IndexPage = () => {
 
         <Box className="flex gap-16 mb-12">
           <StaticImage
-            src="../assets/images/my-profile.jpeg"
+            src="../assets/images/my-profile.jpg"
             alt="Profile"
+            formats={['auto']}
             className="rounded-full w-48 h-48 shadow-lg ring-8 ring-slate-900 ring-opacity-5"
           />
 
@@ -375,6 +361,7 @@ const IndexPage = () => {
   )
 }
 
+// www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
 export const Head = () => <Seo title="이력서 - 김영수" />
 
 export default IndexPage

@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
+import { Fragment, ReactNode } from 'react'
 
 import { Container, Header } from 'src/components'
 
-export const Layout = ({ children }: any) => {
+export const Layout = ({ children }: { children?: ReactNode }) => {
   return (
     <Fragment>
       <Container>

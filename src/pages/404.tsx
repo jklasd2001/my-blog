@@ -1,4 +1,5 @@
-import { Heading, Layout, Seo } from 'src/components'
+import { Layout, Seo } from 'src/components'
+import { Heading } from 'src/elements'
 
 const NotFoundPage = () => (
   <Layout>

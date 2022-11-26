@@ -1,41 +1,24 @@
 import { graphql, PageProps } from 'gatsby'
 
-import { Box, Layout, PostCard, Seo } from 'src/components'
+import { Layout, PostCard, Seo } from 'src/components'
+import { Box } from 'src/elements'
+import { AllMarkdownRemark, PostItem } from 'src/types'
 
-type IndexPageProps = {
-  allMarkdownRemark: {
-    edges: [
-      {
-        node: {
-          id: string
-          fields: {
-            slug: string
-          }
-          frontmatter: {
-            title: string
-            summary: string
-            date: string
-            categories: string[]
-          }
-        }
-      },
-    ]
-  }
-}
-
-const BlogPage = ({ data }: PageProps<IndexPageProps>) => {
+const BlogPage = ({ data }: PageProps<AllMarkdownRemark<PostItem>>) => {
   return (
     <Layout className="max-w-screen-lg">
       <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {data.allMarkdownRemark.edges.map((edge) => (
-          <PostCard
-            key={edge.node.id}
-            date={edge.node.frontmatter.date}
-            title={edge.node.frontmatter.title}
-            slug={edge.node.fields.slug}
-            summary={edge.node.frontmatter.summary}
-          />
-        ))}
+        {data.allMarkdownRemark.edges.map(
+          ({
+            node: {
+              id,
+              fields: { slug },
+              frontmatter: { date, title, summary },
+            },
+          }) => (
+            <PostCard key={id} date={date} title={title} slug={slug} summary={summary} />
+          ),
+        )}
       </Box>
     </Layout>
   )
