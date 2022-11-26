@@ -8,6 +8,9 @@ type IndexPageProps = {
       {
         node: {
           id: string
+          fields: {
+            slug: string
+          }
           frontmatter: {
             title: string
             summary: string
@@ -29,6 +32,7 @@ const BlogPage = ({ data }: PageProps<IndexPageProps>) => {
             key={edge.node.id}
             date={edge.node.frontmatter.date}
             title={edge.node.frontmatter.title}
+            slug={edge.node.fields.slug}
             summary={edge.node.frontmatter.summary}
           />
         ))}
@@ -47,6 +51,9 @@ export const getPostList = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             summary
