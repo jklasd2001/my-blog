@@ -1,9 +1,8 @@
-import { Layout, Seo } from 'src/components'
+import { Heading, Layout, Seo } from 'src/components'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Heading type="h2">죄송합니다. 해당 페이지를 찾을 수 없습니다.</Heading>
   </Layout>
 )
 
