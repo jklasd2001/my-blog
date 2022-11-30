@@ -1,6 +1,7 @@
 import { graphql, PageProps } from 'gatsby'
 
 import { Layout, Seo } from 'src/components'
+import { Box } from 'src/elements'
 
 type PostTemplateProps = {
   allMarkdownRemark: {
@@ -29,10 +30,14 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
   return (
     <Layout>
       <Seo title={title} description={summary} />
-      <article
-        className="prose lg:prose-xl prose-slate"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+
+      <Box className="prose lg:prose-lg prose-slate mt-8">
+        <h2>{title}</h2>
+
+        <span>{date}</span>
+
+        <article dangerouslySetInnerHTML={{ __html: html }} />
+      </Box>
     </Layout>
   )
 }

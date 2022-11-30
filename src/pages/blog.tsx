@@ -6,7 +6,7 @@ import { AllMarkdownRemark, PostItem } from 'src/types'
 
 const BlogPage = ({ data }: PageProps<AllMarkdownRemark<PostItem>>) => {
   return (
-    <Layout className="max-w-screen-lg">
+    <Layout>
       <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.allMarkdownRemark.edges.map(
           ({
