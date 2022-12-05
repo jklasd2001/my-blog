@@ -26,6 +26,7 @@
     "sort-package-json": "npx sort-package-json"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.13",
     "classnames": "^2.3.2",
     "gatsby": "^5.2.0",
     "react": "^18.2.0",

@@ -1,9 +1,9 @@
-import { Fragment } from 'react'
+import { ThemeProvider } from 'src/context'
 
 import type { GatsbyBrowser } from 'gatsby'
 
 import 'src/styles/global.css'
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => {
-  return <Fragment>{element}</Fragment>
+  return <ThemeProvider>{element}</ThemeProvider>
 }

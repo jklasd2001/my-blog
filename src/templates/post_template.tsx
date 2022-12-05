@@ -31,7 +31,7 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
     <Layout>
       <Seo title={title} description={summary} />
 
-      <Box className="prose lg:prose-lg prose-slate mt-8">
+      <Box className="prose dark:prose-invert lg:prose-lg prose-slate mt-8">
         <h2>{title}</h2>
 
         <span>{date}</span>
