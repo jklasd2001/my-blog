@@ -24,3 +24,145 @@ export default {
 };
 
 ```
+
+### 야아어오ㅓ오오
+ㅁ네ㅐ암네ㅐ암ㄴ
+ㅁㄴ[ㅔ애ㅏㅁ네[ㅇ
+ㄴㅁ암ㄴ
+암
+암
+ㅏㅇ
+아내ㅔㅏㅇ
+ㅇ나ㅣ;ㄹㄴ에ㅐ랑ㄴ
+ㅇ네ㅐㅑ랑ㄴㄹ
+ㅇ네ㅑㅐㄹㄴㅇ
+ㄹㅇㄴ]
+ㄹ야ㅐ허ㅑㅇㄹㅎ
+ㅇㄹ햐ㅐㅓㅇㄹ하ㅣㄹ
+헗ㅇ
+\ㅓㄹ허
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+
+
+### 1231246547
+ㅁ네ㅐ암네ㅐ암ㄴ
+ㅁㄴ[ㅔ애ㅏㅁ네[ㅇ
+ㄴㅁ암ㄴ
+암
+암
+ㅏㅇ
+아내ㅔㅏㅇ
+ㅇ나ㅣ;ㄹㄴ에ㅐ랑ㄴ
+ㅇ네ㅐㅑ랑ㄴㄹ
+ㅇ네ㅑㅐㄹㄴㅇ
+ㄹㅇㄴ]
+ㄹ야ㅐ허ㅑㅇㄹㅎ
+ㅇㄹ햐ㅐㅓㅇㄹ하ㅣㄹ
+헗ㅇ
+\ㅓㄹ허
+
+
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```
+
+```
+export default {
+  input: 'src/main.js',
+  output: {
+    dir: 'dist',
+    format: 'cjs'
+  }
+  external: [ 'faker' ]
+};
+
+```

@@ -19,8 +19,10 @@ specifiers:
   gatsby-plugin-sharp: ^5.2.0
   gatsby-plugin-tsconfig-paths: ^1.0.5
   gatsby-plugin-typescript: ^5.2.0
+  gatsby-remark-autolink-headers: ^6.2.0
   gatsby-remark-external-links: ^0.0.4
   gatsby-remark-images: ^7.2.0
+  gatsby-remark-table-of-contents: ^2.0.0
   gatsby-source-filesystem: ^5.2.0
   gatsby-transformer-remark: ^6.2.0
   gatsby-transformer-sharp: ^5.2.0
@@ -53,8 +55,10 @@ devDependencies:
   gatsby-plugin-sharp: 5.2.0_gatsby@5.2.0
   gatsby-plugin-tsconfig-paths: 1.0.5_gatsby@5.2.0
   gatsby-plugin-typescript: 5.2.0_gatsby@5.2.0
+  gatsby-remark-autolink-headers: 6.2.0_mmfbi2fzwqkczhgnjxxufhvoz4
   gatsby-remark-external-links: 0.0.4
   gatsby-remark-images: 7.2.0_y4lazhetnsbltaw36lcdfsoh5y
+  gatsby-remark-table-of-contents: 2.0.0
   gatsby-source-filesystem: 5.2.0_gatsby@5.2.0
   gatsby-transformer-remark: 6.2.0_gatsby@5.2.0
   gatsby-transformer-sharp: 5.2.0_y4lazhetnsbltaw36lcdfsoh5y
@@ -5835,6 +5839,24 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
 
+  /gatsby-remark-autolink-headers/6.2.0_mmfbi2fzwqkczhgnjxxufhvoz4:
+    resolution: {integrity: sha512-OOZ11QmXFU/sOru0nTKMuIM660O2doSq/M8zttq6U5nGwLinGBuvKVb47DBuhMe/VXq8P1okWZgk8YK+Ti+SLA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+      react: ^18.0.0 || ^0.0.0
+      react-dom: ^18.0.0 || ^0.0.0
+    dependencies:
+      '@babel/runtime': 7.20.1
+      gatsby: 5.2.0_lb6du3saekb5anf2gjv3wxj3oq
+      github-slugger: 1.5.0
+      lodash: 4.17.21
+      mdast-util-to-string: 2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      unist-util-visit: 2.0.3
+    dev: true
+
   /gatsby-remark-external-links/0.0.4:
     resolution: {integrity: sha512-JIKZguAGoGlzsJusfCb4JKM5E6JUEDbtlBkbErt7CdMnfBP+AldZeMQEQWK5xsJ5uXCyc4qqcBWR8vp0afFpOw==}
     dependencies:
@@ -5863,6 +5885,13 @@ packages:
       query-string: 6.14.1
       unist-util-select: 3.0.4
       unist-util-visit-parents: 3.1.1
+    dev: true
+
+  /gatsby-remark-table-of-contents/2.0.0:
+    resolution: {integrity: sha512-Hl/zfvwX0FWMjaurzOTLpHNQ4rOd4AXnNrRsqJLwZPecZBc42UDX/JFL4hYS/NfrPd/svtwipkBXGo51CaKFXw==}
+    dependencies:
+      js-yaml: 3.14.1
+      mdast-util-toc: 5.1.0
     dev: true
 
   /gatsby-script/2.2.0_a7m4z3ttffxhxhhrb3ph3svjjm:

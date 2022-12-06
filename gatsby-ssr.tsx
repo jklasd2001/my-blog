@@ -7,9 +7,5 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setHtmlAttributes }) =
 }
 
 export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({ element }) => {
-  return (
-    <div className="bg-black">
-      <ThemeProvider>{element}</ThemeProvider>
-    </div>
-  )
+  return <ThemeProvider>{element}</ThemeProvider>
 }

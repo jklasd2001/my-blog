@@ -1,6 +1,6 @@
 import { graphql, PageProps } from 'gatsby'
 
-import { Layout, Seo } from 'src/components'
+import { Layout, Seo, TableOfContents } from 'src/components'
 import { Box } from 'src/elements'
 
 type PostTemplateProps = {
@@ -15,6 +15,7 @@ type PostTemplateProps = {
             date: string
             categories: string
           }
+          tableOfContents: string
         }
       },
     ]
@@ -25,6 +26,7 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
   const {
     html,
     frontmatter: { title, categories, summary, date },
+    tableOfContents,
   } = props.data.allMarkdownRemark.edges[0].node
 
   return (
@@ -32,6 +34,7 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
       <Seo title={title} description={summary} />
 
       <Box className="prose dark:prose-invert lg:prose-lg prose-slate mt-8">
+        <TableOfContents tableOfContents={tableOfContents} />
         <h2>{title}</h2>
 
         <span>{date}</span>
@@ -56,6 +59,7 @@ export const queryMarkdownDataBySlug = graphql`
             date(formatString: "YYYY.MM.DD")
             categories
           }
+          tableOfContents
         }
       }
     }
