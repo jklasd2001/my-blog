@@ -27,6 +27,7 @@ specifiers:
   gatsby-transformer-remark: ^6.2.0
   gatsby-transformer-sharp: ^5.2.0
   postcss: ^8.4.19
+  prettier-plugin-tailwindcss: ^0.2.0
   react: ^18.2.0
   react-dom: ^18.2.0
   tailwindcss: ^3.2.4
@@ -63,6 +64,7 @@ devDependencies:
   gatsby-transformer-remark: 6.2.0_gatsby@5.2.0
   gatsby-transformer-sharp: 5.2.0_y4lazhetnsbltaw36lcdfsoh5y
   postcss: 8.4.19
+  prettier-plugin-tailwindcss: 0.2.0
   tailwindcss: 3.2.4_postcss@8.4.19
   typescript: 4.9.3
 
@@ -8730,6 +8732,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.2.0:
+    resolution: {integrity: sha512-Ruqig/mdWCSpqdq9WK44nrmqM4BFWTzBPhPGwC5NK3coV9eZntEQPB84MGZbjAg0XQU02jVRHXNRPREBzxvM+A==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
     dev: true
 
   /prettier/2.7.1:
