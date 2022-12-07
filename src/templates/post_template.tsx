@@ -1,7 +1,6 @@
 import { graphql, PageProps } from 'gatsby'
 
-import { Layout, Seo, TableOfContents } from 'src/components'
-import { Box } from 'src/elements'
+import { Container, Layout, Seo, TableOfContents } from 'src/components'
 
 type PostTemplateProps = {
   allMarkdownRemark: {
@@ -32,15 +31,19 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
   return (
     <Layout>
       <Seo title={title} description={summary} />
+      <Container className="relative">
+        <div className="prose dark:prose-invert lg:prose-lg prose-slate mt-8">
+          <h2>{title}</h2>
 
-      <Box className="prose dark:prose-invert lg:prose-lg prose-slate mt-8">
-        <TableOfContents tableOfContents={tableOfContents} />
-        <h2>{title}</h2>
+          <span>{date}</span>
 
-        <span>{date}</span>
+          <article dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
 
-        <article dangerouslySetInnerHTML={{ __html: html }} />
-      </Box>
+        <div className="absolute h-full top-0 right-0">
+          <TableOfContents tableOfContents={tableOfContents} />
+        </div>
+      </Container>
     </Layout>
   )
 }

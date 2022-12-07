@@ -21,3 +21,9 @@
         height: 100%;
     }
 }
+
+@layer components {
+    .table_of_contents li {
+        font-size: 0.8rem;
+    }
+}

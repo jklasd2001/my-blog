@@ -1,5 +1,3 @@
-import { Box } from 'src/elements'
-
 interface TableOfContentsProps {
   tableOfContents: string
 }
@@ -11,8 +9,8 @@ interface TableOfContentsProps {
  */
 export const TableOfContents = ({ tableOfContents }: TableOfContentsProps) => {
   return (
-    <Box
-      className="not-prose sticky top-10 bg-pink-500"
+    <div
+      className="sticky top-10 right-0 border-l-2 border-l-slate-200 pl-4 text-base text-slate-500"
       dangerouslySetInnerHTML={{ __html: tableOfContents }}
     />
   )
