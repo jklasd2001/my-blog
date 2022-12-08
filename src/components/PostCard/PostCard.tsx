@@ -1,4 +1,5 @@
 import { Link, navigate } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import { Box, Heading, Paragraph, Span } from 'src/elements'
 
@@ -7,16 +8,22 @@ interface PostCardProps {
   title: string
   summary: string
   date: string
+  thumbnail: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
 }
 
-export const PostCard = ({ title, summary, date, slug }: PostCardProps) => {
+export const PostCard = ({ title, summary, date, slug, thumbnail }: PostCardProps) => {
   return (
     <Box
-      className="rounded hover:translate-y-1 overflow-hidden border shadow-md hover:shadow-lg transition-all"
+      className="overflow-hidden rounded border shadow-md transition-all hover:translate-y-1 hover:shadow-lg"
       onClick={() => {
         navigate(slug)
       }}
     >
+      <GatsbyImage image={thumbnail.childImageSharp.gatsbyImageData} alt="dd" />
       <Box className="p-6">
         <Link to="/">
           <Heading type="h4">{title}</Heading>
