@@ -1,15 +1,7 @@
 import { graphql, PageProps } from 'gatsby'
-import queryString, { ParsedQuery } from 'query-string'
 
-import { Categories, Container, Layout, PostCard, Seo } from 'src/components'
-import { Box } from 'src/elements'
+import { Container, Layout, PostCard, Seo } from 'src/components'
 import { AllMarkdownRemark, PostItem } from 'src/types'
-
-const CATEGORY_LIST = {
-  ALL: 5,
-  React: 2,
-  Gatsby: 1,
-}
 
 interface BlogPageProps extends AllMarkdownRemark<PostItem> {
   location: {
@@ -17,16 +9,11 @@ interface BlogPageProps extends AllMarkdownRemark<PostItem> {
   }
 }
 
-const BlogPage = ({ location: { search }, data }: PageProps<BlogPageProps>) => {
-  const parsed: ParsedQuery<string> = queryString.parse(search)
-  const selectedCategory =
-    typeof parsed.category !== 'string' || !parsed.category ? 'ALL' : parsed.category
-
+const BlogPage = ({ data }: PageProps<BlogPageProps>) => {
   return (
     <Layout>
       <Container className="container mx-auto max-w-screen-lg">
-        <Categories selectedCategory={selectedCategory} categoryList={CATEGORY_LIST} />
-        <Box className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 py-10 md:grid-cols-2 lg:grid-cols-3">
           {data.allMarkdownRemark.edges.map(
             ({
               node: {
@@ -45,7 +32,7 @@ const BlogPage = ({ location: { search }, data }: PageProps<BlogPageProps>) => {
               />
             ),
           )}
-        </Box>
+        </div>
       </Container>
     </Layout>
   )
@@ -67,7 +54,7 @@ export const getPostList = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            date(formatString: "YYYY년 MM월 DD일")
             categories
             thumbnail {
               childImageSharp {

@@ -7,7 +7,7 @@
     "blog"
   ],
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jklasd2001/gatsby-blog"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,6 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "start": "gatsby develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "npkill": "npx npkill",
     "sort-package-json": "npx sort-package-json"
   },
@@ -35,7 +33,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.8",
-    "@types/node": "^18.11.11",
+    "@types/node": "^18.11.12",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "autoprefixer": "^10.4.13",
@@ -57,7 +55,7 @@
     "gatsby-transformer-remark": "^6.2.0",
     "gatsby-transformer-sharp": "^5.2.0",
     "postcss": "^8.4.19",
-    "prettier-plugin-tailwindcss": "^0.2.0",
+    "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4"
   }

@@ -10,7 +10,7 @@ interface TableOfContentsProps {
 export const TableOfContents = ({ tableOfContents }: TableOfContentsProps) => {
   return (
     <div
-      className="sticky top-32 right-0 border-l-2 border-l-slate-200 pl-4 text-base text-slate-500"
+      className="sticky top-32 border-l-2 border-l-slate-200 pl-4 text-base text-slate-500"
       dangerouslySetInnerHTML={{ __html: tableOfContents }}
     />
   )

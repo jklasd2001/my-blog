@@ -1,9 +1,8 @@
 import { Layout, Seo } from 'src/components'
-import { Heading } from 'src/elements'
 
 const NotFoundPage = () => (
   <Layout>
-    <Heading type="h2">죄송합니다. 해당 페이지를 찾을 수 없습니다.</Heading>
+    <h2>죄송합니다. 해당 페이지를 찾을 수 없습니다.</h2>
   </Layout>
 )
 

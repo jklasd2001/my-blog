@@ -31,16 +31,16 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
   return (
     <Layout>
       <Seo title={title} description={summary} />
-      <Container className="relative">
-        <div className="prose dark:prose-invert lg:prose-lg prose-slate mt-8">
-          <h2>{title}</h2>
+      <Container
+        type="main"
+        className="prose prose-slate relative mt-8 dark:prose-invert lg:prose-lg"
+      >
+        <h2>{title}</h2>
+        <small>{date}</small>
 
-          <span>{date}</span>
+        <article dangerouslySetInnerHTML={{ __html: html }} />
 
-          <article dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-
-        <div className="absolute h-full top-0 right-0">
+        <div className="absolute top-0 -right-4 ml-4 h-full translate-x-full">
           <TableOfContents tableOfContents={tableOfContents} />
         </div>
       </Container>
