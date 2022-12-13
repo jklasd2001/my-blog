@@ -20,6 +20,9 @@ const config: GatsbyConfig = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-tsconfig-paths`, // 절대경로
     `gatsby-plugin-provide-react`, // import * as React from 'react' 없애기
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -62,6 +65,21 @@ const config: GatsbyConfig = {
               className: 'table-of-contents',
             },
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
+            },
+          },
+          // {
+          //   resolve: 'gatsby-remark-images',
+          //   options: {
+          //     maxWidth: 768,
+          //     quality: 100,
+          //     withWebp: true,
+          //   },
+          // },
           `gatsby-remark-autolink-headers`,
         ],
       },
@@ -78,23 +96,14 @@ const config: GatsbyConfig = {
     //       //     withWebp: true,
     //       //   },
     //       // },
-    //       {
-    //         resolve: 'gatsby-remark-external-links',
-    //         options: {
-    //           target: '_blank',
-    //           rel: 'nofollow',
-    //         },
-    //       },
+
     //     ],
     //   },
     // },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `jkalsd2001's Blog`,
+        name: `jklasd2001's Blog`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
