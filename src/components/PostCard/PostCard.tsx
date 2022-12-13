@@ -16,7 +16,7 @@ interface PostCardProps {
 export const PostCard = ({ title, summary, date, slug, thumbnail }: PostCardProps) => {
   return (
     <div
-      className="overflow-hidden rounded border border-t-0 bg-slate-50 shadow-md transition-all hover:translate-y-1 hover:shadow-lg dark:border-0 dark:bg-slate-700"
+      className="overflow-hidden rounded bg-slate-50 shadow-md transition-all hover:translate-y-1 hover:shadow-lg  dark:bg-slate-700"
       onClick={() => {
         navigate(slug)
       }}

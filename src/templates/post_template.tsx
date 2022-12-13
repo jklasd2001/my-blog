@@ -33,10 +33,10 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
       <Seo title={title} description={summary} />
       <Container
         type="main"
-        className="prose prose-slate relative mt-8 pb-10 prose-hr:my-6 dark:prose-invert lg:prose-lg lg:prose-hr:my-6"
+        className="prose prose-sm prose-sky relative mt-8 px-8 pb-10 prose-ul:list-decimal prose-hr:my-6 dark:prose-invert lg:prose-base lg:px-0 lg:prose-hr:my-6"
       >
         {/* 제목 */}
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         {/* 날짜 */}
         <small>{date}</small>
         {/* 구분선 */}
@@ -44,7 +44,7 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
 
         <article dangerouslySetInnerHTML={{ __html: html }} />
 
-        <div className="absolute top-0 -right-16 hidden h-full translate-x-full xl:block">
+        <div className="not-prose absolute top-0 -right-16 hidden h-full translate-x-full xl:block">
           <TableOfContents tableOfContents={tableOfContents} />
         </div>
       </Container>
@@ -63,7 +63,7 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD")
+            date(formatString: "YYYY년 MM월 DD일")
             categories
           }
           tableOfContents
