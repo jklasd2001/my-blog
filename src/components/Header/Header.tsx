@@ -11,19 +11,22 @@ export const Header = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="border-b border-b-slate-300 py-4 dark:border-b-slate-300/10">
-      <Container type="header" className="flex px-8 text-gray-800 dark:text-slate-100 md:px-0">
+    <header className="border-b border-b-slate-300 py-3 dark:border-b-slate-300/10 lg:py-4">
+      <Container
+        type="header"
+        className="flex px-4 text-gray-800 dark:text-slate-100 md:px-0 lg:px-0"
+      >
         <Link to="/" className="flex">
           <Logo className="w-[140px] text-gray-800 dark:text-slate-200" />
         </Link>
 
         <nav className="ml-auto">
-          <ul className="flex items-center gap-6">
-            <Link to="/" className="uppercase">
+          <ul className="flex items-center gap-4 lg:gap-6">
+            <Link to="/" className="text-xs uppercase lg:text-base">
               About me
             </Link>
 
-            <Link to="/blog" className="uppercase">
+            <Link to="/blog" className="text-xs uppercase lg:text-base">
               Blog
             </Link>
 

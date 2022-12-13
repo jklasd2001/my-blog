@@ -33,14 +33,18 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
       <Seo title={title} description={summary} />
       <Container
         type="main"
-        className="prose prose-slate relative mt-8 dark:prose-invert lg:prose-lg"
+        className="prose prose-slate relative mt-8 pb-10 prose-hr:my-6 dark:prose-invert lg:prose-lg lg:prose-hr:my-6"
       >
+        {/* 제목 */}
         <h2>{title}</h2>
+        {/* 날짜 */}
         <small>{date}</small>
+        {/* 구분선 */}
+        <hr />
 
         <article dangerouslySetInnerHTML={{ __html: html }} />
 
-        <div className="absolute top-0 -right-4 ml-4 h-full translate-x-full">
+        <div className="absolute top-0 -right-16 hidden h-full translate-x-full xl:block">
           <TableOfContents tableOfContents={tableOfContents} />
         </div>
       </Container>

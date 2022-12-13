@@ -10,7 +10,7 @@ export const IconAdornment = ({ icon: Icon, className, ...rest }: IconAdornmentP
   return (
     <button
       className={classNames(
-        'h-8 w-8 rounded-full p-1 hover:bg-slate-900/10 hover:dark:bg-white/10',
+        'h-6 w-6 rounded-full p-1 hover:bg-slate-900/10 hover:dark:bg-white/10 lg:h-8 lg:w-8',
         className,
       )}
       {...rest}

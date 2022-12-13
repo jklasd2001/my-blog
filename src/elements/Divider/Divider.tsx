@@ -5,5 +5,5 @@ import classNames from 'classnames'
 type DividerProps = HtmlHTMLAttributes<HTMLHRElement>
 
 export const Divider = ({ className = '', ...rest }: DividerProps) => {
-  return <hr className={classNames('my-10', className)} {...rest} />
+  return <hr className={classNames('my-4 lg:my-10', className)} {...rest} />
 }

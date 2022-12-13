@@ -12,7 +12,7 @@ const IndexPage = () => {
     <Layout>
       <Container
         type="main"
-        className="prose px-8 py-20 dark:prose-invert md:prose-base md:px-0 lg:prose-xl"
+        className="prose prose-sm px-8 py-10 dark:prose-invert md:px-0 lg:prose-base lg:py-20 "
       >
         <div>
           <h1 id="about" className="font-bold">
@@ -31,12 +31,12 @@ const IndexPage = () => {
         <div>
           <h2>🙋🏻‍♂️ Introduce</h2>
 
-          <div className="mb-12 flex flex-col gap-2 md:flex-row md:gap-16">
+          <div className="mb-8 flex flex-col gap-2 md:flex-row md:gap-16 lg:mb-12">
             <StaticImage
               src="../assets/images/my-profile.jpg"
               alt="Profile"
               formats={['auto']}
-              className="h-48 w-48 rounded-full shadow-lg ring-8 ring-slate-900 ring-opacity-5 "
+              className="h-40 w-40 self-center  rounded-full shadow-lg ring-8 ring-slate-900 ring-opacity-5 lg:h-48 lg:w-48"
             />
 
             <div className="flex flex-1 items-center justify-center">
@@ -99,8 +99,8 @@ const IndexPage = () => {
               건설현장의 근로자 안전 및 중장비, 건설 자재 관리 및 모니터링 서비스 스타트업
             </p>
 
-            <div className="flex flex-col gap-16 md:flex-row">
-              <div className="w-[240px]">
+            <div className="flex flex-col gap-10 md:flex-row lg:gap-16">
+              <div className="w-auto lg:w-[240px]">
                 <div>
                   <strong>Frontend Developer</strong>
                 </div>
@@ -109,21 +109,21 @@ const IndexPage = () => {
 
               <div className="flex-1">
                 <div className="mb-10">
-                  <h3 className="m-0">
+                  <h3 className="mt-0">
                     <a href="https://developers.musma.net" target="_blank" rel="noreferrer">
                       공통 라이브러리 개발
                     </a>
                   </h3>
                   <small>2022.04 ~ 현재</small>
 
-                  <h3>Description</h3>
+                  <h4>Description</h4>
 
                   <p className="mb-4">
                     생산성 향상을 위해 UI 컴포넌트, SVG 컴포넌트, 공통 함수 및 React Hooks, ESLint
                     Configuration들을 라이브러리로 만들어 배포 및 유지보수하고 있습니다.
                   </p>
 
-                  <h3>Work</h3>
+                  <h4>Work</h4>
 
                   <ul className="mb-10">
                     <li>
@@ -149,7 +149,7 @@ const IndexPage = () => {
                     </li>
                   </ul>
 
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
                   <p>React, Emotion, Typescript, @svgr/cli</p>
                 </div>
 
@@ -157,15 +157,15 @@ const IndexPage = () => {
 
                 <div>
                   <h3>현대중공업 - 중장비 모니터링 시스템</h3>
-                  <span className="mb-4 block">2021.10 ~ 2022.05</span>
+                  <small className="mb-4">2021.10 ~ 2022.05</small>
 
-                  <h3>Description</h3>
+                  <h4>Description</h4>
                   <p className="mb-4">
                     현대중공업의 여러 건설현장에서 운용중인 중장비의 실시간 위치 및 엔진 상태,
                     배터리, 적재량 등의 가동 정보 모니터링 서비스입니다.
                   </p>
 
-                  <h3>Work</h3>
+                  <h4>Work</h4>
 
                   <ul className="mb-10">
                     <li>
@@ -180,23 +180,23 @@ const IndexPage = () => {
                     <li>Tailwind CSS 도입으로 개발 시간 단축</li>
                   </ul>
 
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
                   <p>React, Tailwind CSS, Mobx, Typescript, Cypress, Storybook</p>
                 </div>
 
                 <Divider />
 
                 <div>
-                  <h2>삼성엔지니어링 - 근로자, 중장비, 자재 관리 모니터링 시스템(MCAS)</h2>
-                  <span className="mb-4 block">2020.05 ~ 현재</span>
+                  <h3>삼성엔지니어링 - 근로자, 중장비, 자재 관리 모니터링 시스템(MCAS)</h3>
+                  <small>2020.05 ~ 현재</small>
 
-                  <h3>Description</h3>
+                  <h4>Description</h4>
                   <p className="mb-4">
                     건설 현장의 근로자, 중장비, 자재의 실시간 위치 및 이동 히스토리, 작업 시간등의
                     통계를 볼 수 있는 관리 모니터링 서비스입니다.
                   </p>
 
-                  <h3>Work</h3>
+                  <h4>Work</h4>
 
                   <ul className="mb-10">
                     <li>생산성 향상을 위해 코딩 컨벤션 및 폴더, 컴포넌트 구조 정립</li>
@@ -215,7 +215,7 @@ const IndexPage = () => {
                     <li>Github Action을 이용하여 APK 빌드 및 PlayStore 배포 자동화</li>
                   </ul>
 
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
                   <p>React, Material-UI, Mobx, Socket.io, Typescript</p>
                 </div>
 
@@ -223,16 +223,16 @@ const IndexPage = () => {
 
                 <div>
                   <h3>삼성중공업 - 화물창 온습도 모니터링 시스템</h3>
-                  <span className="">2019.06 ~ 2020.01</span>
+                  <small className="">2019.06 ~ 2020.01</small>
 
-                  <h3>Description</h3>
+                  <h4>Description</h4>
 
                   <p className="mb-4">
                     선박안에 있는 화물창의 온/습도를 모니터링 할 수 있으며, 공조기를 제어하여 원하는
                     온/습도로 맞출 수 있는 시스템입니다.
                   </p>
 
-                  <h3>Work</h3>
+                  <h4>Work</h4>
 
                   <ul className="mb-10">
                     <li>Context API + Mobx를 사용하여 스토어 디자인</li>
@@ -240,7 +240,7 @@ const IndexPage = () => {
                     <li>Socket.io를 이용하여 화물창의 실시간 온/습도 및 상태 모니터링 기능 개발</li>
                   </ul>
 
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
 
                   <p>React, Material-UI, Mobx, Socket.io, Typescript</p>
                 </div>
@@ -258,8 +258,8 @@ const IndexPage = () => {
               출시
             </p>
 
-            <div className="flex gap-16">
-              <div className="w-[240px]">
+            <div className="flex flex-col gap-10 md:flex-row lg:gap-16">
+              <div className="w-auto lg:w-[240px]">
                 <div>
                   <strong>Android Developer</strong>
                 </div>
@@ -268,16 +268,16 @@ const IndexPage = () => {
 
               <div className="flex-1">
                 <div className="mb-10">
-                  <h3 className="m-0">스터디헬퍼 v4 개발</h3>
-                  <span className="mb-4 block">2017.07 ~ 2018.10</span>
+                  <h3 className="mt-0">스터디헬퍼 v4 개발</h3>
+                  <small className="mb-4">2017.07 ~ 2018.10</small>
 
-                  <h3>Description</h3>
+                  <h4>Description</h4>
                   <p className="mb-4">
                     설정한 시간까지 스마트폰을 사용하지 못하게 하는 잠금 기능과 시간 측정 기능으로
                     공부 시간에 집중을 도와주는 모바일 앱입니다.
                   </p>
 
-                  <h3>Work</h3>
+                  <h4>Work</h4>
 
                   <ul className="mb-10">
                     <li>
@@ -288,7 +288,7 @@ const IndexPage = () => {
                     <li>안드로이드 UI 개발 80% 개발</li>
                   </ul>
 
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
                   <p>Android, Java, DataBinding, Volley</p>
                 </div>
               </div>

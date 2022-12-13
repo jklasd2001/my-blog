@@ -12,7 +12,7 @@ interface BlogPageProps extends AllMarkdownRemark<PostItem> {
 const BlogPage = ({ data }: PageProps<BlogPageProps>) => {
   return (
     <Layout>
-      <Container className="container mx-auto max-w-screen-lg">
+      <Container className="container mx-auto max-w-screen-lg px-4 lg:px-0">
         <div className="grid grid-cols-1 gap-4 py-10 md:grid-cols-2 lg:grid-cols-3">
           {data.allMarkdownRemark.edges.map(
             ({

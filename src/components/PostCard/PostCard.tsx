@@ -16,21 +16,20 @@ interface PostCardProps {
 export const PostCard = ({ title, summary, date, slug, thumbnail }: PostCardProps) => {
   return (
     <div
-      className="overflow-hidden rounded border bg-gray-700 shadow-md transition-all hover:translate-y-1 hover:shadow-lg dark:border-0"
+      className="overflow-hidden rounded border border-t-0 bg-slate-50 shadow-md transition-all hover:translate-y-1 hover:shadow-lg dark:border-0 dark:bg-slate-700"
       onClick={() => {
         navigate(slug)
       }}
     >
       <GatsbyImage image={thumbnail.childImageSharp.gatsbyImageData} alt="thumnail" />
+
       <div className="p-6 text-slate-800 dark:text-slate-200">
         <Link to="/">
-          <h5>{title}</h5>
-          <p>{summary}</p>
+          <h4 className="mb-4 font-semibold">{title}</h4>
+          <p className="mb-2 overflow-hidden text-sm line-clamp-3">{summary}</p>
         </Link>
 
-        <div>
-          <span>{date}</span>
-        </div>
+        <small>{date}</small>
       </div>
     </div>
   )
