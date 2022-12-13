@@ -55,6 +55,12 @@ const config: GatsbyConfig = {
         // Plugins configs
         plugins: [
           {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              dashes: 'oldschool',
+            },
+          },
+          {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
               exclude: 'Table of Contents',
@@ -66,40 +72,30 @@ const config: GatsbyConfig = {
             },
           },
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
               rel: 'nofollow',
             },
           },
-          // {
-          //   resolve: 'gatsby-remark-images',
-          //   options: {
-          //     maxWidth: 768,
-          //     quality: 100,
-          //     withWebp: true,
-          //   },
-          // },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              quality: 100,
+              withWebp: true,
+            },
+          },
           `gatsby-remark-autolink-headers`,
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [
-    //       // {
-    //       //   resolve: 'gatsby-remark-images',
-    //       //   options: {
-    //       //     maxWidth: 768,
-    //       //     quality: 100,
-    //       //     withWebp: true,
-    //       //   },
-    //       // },
-
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
