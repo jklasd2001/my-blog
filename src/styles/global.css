@@ -22,8 +22,9 @@
     }
 }
 
-@layer components {
-    .table_of_contents li {
-        font-size: 0.8rem;
-    }
+/* Gatsby Code Copy Button */
+.gatsby-remark-prismjs-copy-button-container {
+    top: 42px;
+    right: 6px;
+    left: auto;
 }

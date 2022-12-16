@@ -24,6 +24,7 @@ specifiers:
   gatsby-remark-external-links: ^0.0.4
   gatsby-remark-images: ^7.2.0
   gatsby-remark-prismjs: ^7.2.0
+  gatsby-remark-prismjs-copy-button: ^0.3.1
   gatsby-remark-smartypants: ^6.2.0
   gatsby-remark-table-of-contents: ^2.0.0
   gatsby-source-filesystem: ^5.2.0
@@ -67,6 +68,7 @@ devDependencies:
   gatsby-remark-external-links: 0.0.4
   gatsby-remark-images: 7.2.0_y4lazhetnsbltaw36lcdfsoh5y
   gatsby-remark-prismjs: 7.2.0_jrhu6ypjknrkxl6oyjsef7e6li
+  gatsby-remark-prismjs-copy-button: 0.3.1_gatsby@5.2.0
   gatsby-remark-smartypants: 6.2.0_gatsby@5.2.0
   gatsby-remark-table-of-contents: 2.0.0
   gatsby-source-filesystem: 5.2.0_gatsby@5.2.0
@@ -5910,6 +5912,15 @@ packages:
       query-string: 6.14.1
       unist-util-select: 3.0.4
       unist-util-visit-parents: 3.1.1
+    dev: true
+
+  /gatsby-remark-prismjs-copy-button/0.3.1_gatsby@5.2.0:
+    resolution: {integrity: sha512-/A3BuZSdmI62+uSitAbgqdoS3QtYX4kiz9DZZgc1qMqpPss07YTmU8dFuVNxnNDP13h9jAMfr3BxP7J60ATZSg==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      gatsby: ^3.0.0 || ^4.0.0
+    dependencies:
+      gatsby: 5.2.0_o4scbtliisanygemawej7x2d6i
     dev: true
 
   /gatsby-remark-prismjs/7.2.0_jrhu6ypjknrkxl6oyjsef7e6li:

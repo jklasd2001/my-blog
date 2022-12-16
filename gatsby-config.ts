@@ -71,6 +71,7 @@ const config: GatsbyConfig = {
               className: 'table-of-contents',
             },
           },
+          `gatsby-remark-prismjs-copy-button`,
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
