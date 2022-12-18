@@ -11,6 +11,7 @@ export interface PostItem {
       summary: string
       date: string
       categories: string[]
+      publish: boolean
       thumbnail: {
         childImageSharp: {
           gatsbyImageData: IGatsbyImageData
