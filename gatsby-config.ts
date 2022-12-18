@@ -60,6 +60,7 @@ const config: GatsbyConfig = {
               dashes: 'oldschool',
             },
           },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
@@ -93,7 +94,6 @@ const config: GatsbyConfig = {
               withWebp: true,
             },
           },
-          `gatsby-remark-autolink-headers`,
         ],
       },
     },

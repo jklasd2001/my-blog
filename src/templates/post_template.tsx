@@ -33,7 +33,7 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
       <Seo title={title} description={summary} />
       <Container
         type="main"
-        className="prose prose-sm prose-sky relative mt-8 px-8 pb-10 prose-ul:list-decimal prose-hr:my-6 dark:prose-invert lg:prose-base lg:px-0 lg:prose-hr:my-6"
+        className="prose prose-sm relative mt-8 px-8 pb-10 prose-a:no-underline prose-ul:list-decimal prose-hr:my-6 dark:prose-invert lg:prose-base lg:px-0 lg:prose-hr:my-6"
       >
         {/* 제목 */}
         <h1>{title}</h1>
@@ -42,11 +42,13 @@ const PostTemplate = (props: PageProps<PostTemplateProps>) => {
         {/* 구분선 */}
         <hr />
 
-        <article dangerouslySetInnerHTML={{ __html: html }} />
+        {/* 목차 */}
+        <TableOfContents tableOfContents={tableOfContents} />
 
-        <div className="not-prose absolute top-0 -right-16 hidden h-full translate-x-full xl:block">
-          <TableOfContents tableOfContents={tableOfContents} />
-        </div>
+        <hr />
+
+        {/* 블로그 내용 */}
+        <article dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </Layout>
   )
