@@ -2,6 +2,8 @@ import { createContext, ReactNode, useContext, useLayoutEffect, useState } from 
 
 type Theme = 'light' | 'dark'
 
+const isBrowser = typeof window !== 'undefined'
+
 interface ThemeContextType {
   theme: Theme
   toggleTheme: () => void
@@ -18,10 +20,9 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }: { children?: ReactNode }) => {
-  const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light'
-  const localTheme = localStorage.getItem('theme')
+  const prefersColorScheme =
+    isBrowser && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  const localTheme = isBrowser && window.localStorage.getItem('theme')
   const initialTheme = localTheme || prefersColorScheme
 
   const [theme, setTheme] = useState<Theme>(initialTheme as Theme)
@@ -37,7 +38,7 @@ export const ThemeProvider = ({ children }: { children?: ReactNode }) => {
       document.documentElement.classList.remove('dark')
     }
     setTheme(theme)
-    localStorage.setItem('theme', theme)
+    window.localStorage.setItem('theme', theme)
   }
 
   useLayoutEffect(() => {
