@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import { Link } from 'gatsby'
 
@@ -9,6 +11,11 @@ import { Logo } from './components'
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <header className="border-b border-b-slate-300 py-3 dark:border-b-slate-300/10 lg:py-4">
@@ -30,12 +37,14 @@ export const Header = () => {
               Blog
             </Link>
 
-            <IconAdornment
-              icon={theme === 'dark' ? MoonIcon : SunIcon}
-              onClick={() => {
-                toggleTheme()
-              }}
-            />
+            {mounted && (
+              <IconAdornment
+                icon={theme === 'dark' ? MoonIcon : SunIcon}
+                onClick={() => {
+                  toggleTheme()
+                }}
+              />
+            )}
           </ul>
         </nav>
       </Container>

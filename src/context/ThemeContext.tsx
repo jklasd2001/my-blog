@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useLayoutEffect, useState } from 'react'
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
 
 type Theme = 'light' | 'dark'
 
@@ -20,12 +20,7 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }: { children?: ReactNode }) => {
-  const prefersColorScheme =
-    isBrowser && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  const localTheme = isBrowser && window.localStorage.getItem('theme')
-  const initialTheme = localTheme || prefersColorScheme
-
-  const [theme, setTheme] = useState<Theme>(initialTheme as Theme)
+  const [theme, setTheme] = useState<Theme>('light')
 
   const toggleTheme = () => {
     theme === 'light' ? changeTheme('dark') : changeTheme('light')
@@ -41,14 +36,13 @@ export const ThemeProvider = ({ children }: { children?: ReactNode }) => {
     window.localStorage.setItem('theme', theme)
   }
 
-  useLayoutEffect(() => {
-    if (theme === 'dark') {
-      setTheme('dark')
-      document.documentElement.classList.add('dark')
-    } else {
-      setTheme('light')
-      document.documentElement.classList.remove('dark')
-    }
+  useEffect(() => {
+    const prefersColorScheme =
+      isBrowser && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    const localTheme = isBrowser && window.localStorage.getItem('theme')
+    const initialTheme = localTheme || prefersColorScheme
+
+    changeTheme(initialTheme as Theme)
   }, [])
 
   return (
