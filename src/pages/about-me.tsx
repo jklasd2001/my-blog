@@ -1,7 +1,6 @@
 /**
  * https://www.gatsbyjs.com/plugins/gatsby-plugin-image
  */
-
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { Seo, Layout, Container } from 'src/components'
