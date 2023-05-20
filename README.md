@@ -1,4 +1,3 @@
-## jklasd2001's Gatsby Blog
+# jklasd2001.blog.com
 
-asdopsakdopsadkopak
-
+프론트엔드 개발자 김영수 기술 블로그입니다.
