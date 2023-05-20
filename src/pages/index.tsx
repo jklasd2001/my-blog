@@ -13,7 +13,7 @@ const IndexPage = ({ data }: PageProps<BlogPageProps>) => {
   return (
     <Layout>
       <Container className="container mx-auto max-w-screen-lg px-8 lg:px-0">
-        <div className="grid grid-cols-1 gap-4 py-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="py-10">
           {data.allMarkdownRemark.edges.map(
             ({
               node: {

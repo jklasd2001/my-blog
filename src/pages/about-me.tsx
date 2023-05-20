@@ -11,7 +11,7 @@ const AboutMePage = () => {
     <Layout>
       <Container
         type="main"
-        className="prose prose-sm px-8 py-10 dark:prose-invert md:px-0 lg:prose-base lg:py-20 "
+        className="prose prose-sm px-8 py-10 dark:prose-invert lg:prose-lg md:px-0 lg:py-20 "
       >
         <div>
           <h1 id="about" className="font-bold">
@@ -35,7 +35,7 @@ const AboutMePage = () => {
               src="../assets/images/my-profile.jpg"
               alt="Profile"
               formats={['auto']}
-              className="h-40 w-40 self-center  rounded-full shadow-lg ring-8 ring-slate-900 ring-opacity-5 lg:h-48 lg:w-48"
+              className="h-40 w-40 self-center rounded shadow-lg  ring-slate-900 ring-opacity-5 lg:h-48 lg:w-48"
             />
 
             <div className="flex flex-1 items-center justify-center">
@@ -351,7 +351,7 @@ const AboutMePage = () => {
           <h2>👨🏼‍🎓 Education</h2>
 
           <StaticImage
-            src="../assets/images/cup_emblem.jpg"
+            src="../assets/images/cup-emblem.jpg"
             alt="Profile"
             className="mb-6 h-24 w-24 rounded-full shadow-lg ring-8 ring-slate-900 ring-opacity-5"
           />
