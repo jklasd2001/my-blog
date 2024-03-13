@@ -1,8 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -12,6 +9,7 @@
         "**/Thumbs.db": true,
         "**/node_modules": true
     },
-    "files.eol": "\n",
-    "explorerExclude.backup": {}
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    }
 }
